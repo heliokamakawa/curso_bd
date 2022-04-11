@@ -23,6 +23,17 @@ obs: Para cada questão utilize o padrão SQL89 e SQL92
 08 - Liste o id e o nome de todas as cidades da região sudeste e as respectivas siglas do estado.
 09 - Escreva a consulta que liste o nome dos Funcionários do estado Paraná.
 10 - Escreva a consulta que liste o nome e o telefone dos Fornecedores da cidade de São Paulo.
+
+11 - Liste os produtos da categoria BEBEIDA NÃO ALCÓOLICA e da linha ALIMENTOS E BEBIDAS.
+12 - Liste os produtos que possuem a unidade de medida em QUILOGRAMA. 
+13 - Em qual categoria e linha pertence o produto REFRIGERANTE COCA-COLA GARRAFA PET 2 L?
+14 - Qual o nome da linha onde estão todos os refrigentes? 
+15 - Qual o produto mais caro da categoria BEBEIDA NÃO ALCÓOLICA?
+16 - Escreva o comando que apresente a quantidade de refrigentes que estão cadastrados em produtos?
+17 - Escreva o comando que apresente a quantidade de BEBEIDA ALCÓOLICA que estão cadastrados em produtos?
+18 - Escreva o comando que liste o nome dos Refrigentes de 2 L?
+19 - Escreva o comando que apresente o preço médio dos Refrigentes de 2 L?
+20 - Com base do estudo de caso, elabore um exercício de sua autoria que envolva pelo menos 3 tabelas, no qual, o resultado possa ajudar o usuário. Em seguida resolva o exercício elaborado.
 */
 
 
