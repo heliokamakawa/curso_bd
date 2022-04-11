@@ -1,0 +1,28 @@
+/**
+Lista de exercícios - JOIN 
+
+Responda as questões:
+01 - O que é JOIN? Quando é necessário?
+02 - Qual a sintaxe do JOIN? Maiúscula ou minúscula faz diferença? Existe algum padrão? Explique.
+04 - O que é primordial para que o resultado tenha sentido? Explique.
+05 - Existe mais de uma maneira de realizar o JOIN? Quantas? Qual é a mais eficiente? 
+06 - Para realizar o JOIN de 1523 tableas, quantas comparações de junções são necessárias?
+07 - O que é análise semântica e de sintaxe? Qual a diferença? Para que serve?
+08 - Em um JOIN, há casos em que seja necessário atribuir o nome da tabela na cosulta? Explique.
+09 - De acordo com o estudo de caso, cite 4 exemplos em que seja possível utilizar o JOIN e 3 exemplos que não seja possível realizar o JOIN.
+
+Conforme o estudo de caso, elabore as consultas solicitadas abaixo:
+obs: Para cada questão utilize o padrão SQL89 e SQL92
+01 - Liste o id e o nome de todas as cidades e as respectivas siglas do estado.
+02 - Em relação ao resultado do exercício anterior,note que os nomes das colunas não estão claras. Refaça o comando para que torne mais claras.
+03 - Refaça o exercício anterior atribuindo o nome completo da tabela em todos os atributos.
+04 - Refaça o exercício anterior definindo o apelido na tabela.
+05 - Explique a diferença entre o exercício 03 e 04. Qual é a melhor? Qual devemos estudar?
+06 - Quantos registros foram gerados no resultado do exercício 02? O comando do exercício anterior pode ser utilizado para descobrir as cidades da região sul? Justifique/explique o que ocorre.
+07 - Liste o id e o nome de todas as cidades e as respectivas siglas do estado de São Paulo. 
+08 - Liste o id e o nome de todas as cidades da região sudeste e as respectivas siglas do estado.
+09 - Escreva a consulta que liste o nome dos Funcionários do estado Paraná.
+10 - Escreva a consulta que liste o nome e o telefone dos Fornecedores da cidade de São Paulo.
+*/
+
+
