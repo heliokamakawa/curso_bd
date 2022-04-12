@@ -6,9 +6,9 @@ Responda as questões:
 02 - Qual a sintaxe do JOIN? Maiúscula ou minúscula faz diferença? Existe algum padrão? Explique.
 04 - O que é primordial para que o resultado tenha sentido? Explique.
 05 - Existe mais de uma maneira de realizar o JOIN? Quantas? Qual é a mais eficiente? 
-06 - Para realizar o JOIN de 1523 tableas, quantas comparações de junções são necessárias?
+06 - Para realizar o JOIN de 1523 tableas, quantas comparações de junções são necessárias? Explique.
 07 - O que é análise semântica e de sintaxe? Qual a diferença? Para que serve?
-08 - Em um JOIN, há casos em que seja necessário atribuir o nome da tabela na cosulta? Explique.
+08 - Em um JOIN, há casos em que seja necessário atribuir o nome da tabela nas colunas? Explique.
 09 - De acordo com o estudo de caso, cite 4 exemplos em que seja possível utilizar o JOIN e 3 exemplos que não seja possível realizar o JOIN.
 
 Conforme o estudo de caso, elabore as consultas solicitadas abaixo:
