@@ -4,11 +4,11 @@ Lista de exercícios - JOIN
 Responda as questões:
 01 - O que é JOIN? Quando é necessário?
 02 - Qual a sintaxe do JOIN? Maiúscula ou minúscula faz diferença? Existe algum padrão? Explique.
-04 - O que é primordial para que o resultado tenha sentido? Explique.
+04 - O que é primordial para que o resultado tenha sentido em consultas com JOIN? Explique.
 05 - Existe mais de uma maneira de realizar o JOIN? Quantas? Qual é a mais eficiente? 
-06 - Para realizar o JOIN de 1523 tableas, quantas comparações de junções são necessárias? Explique.
+06 - Para realizar o JOIN de 1523 tabelas, quantas comparações de junções são necessárias? Explique.
 07 - O que é análise semântica e de sintaxe? Qual a diferença? Para que serve?
-08 - Em um JOIN, há casos em que seja necessário atribuir o nome da tabela nas colunas? Explique.
+08 - Em uma consulta com JOIN, há casos em que seja necessário atribuir o nome da tabela na projeção das colunas? Explique.
 09 - De acordo com o estudo de caso, cite 4 exemplos em que seja possível utilizar o JOIN e 3 exemplos que não seja possível realizar o JOIN.
 
 Conforme o estudo de caso, elabore as consultas solicitadas abaixo:
@@ -28,7 +28,7 @@ obs: Para cada questão utilize o padrão SQL89 e SQL92
 12 - Liste os produtos que possuem a unidade de medida em QUILOGRAMA. 
 13 - Em qual categoria e linha pertence o produto REFRIGERANTE COCA-COLA GARRAFA PET 2 L?
 14 - Qual o nome da linha onde estão todos os refrigentes? 
-15 - Qual o produto mais caro da categoria BEBEIDA NÃO ALCÓOLICA?
+15 - Qual o produto (preço de venda) mais caro da categoria BEBEIDA NÃO ALCÓOLICA?
 16 - Escreva o comando que apresente a quantidade de refrigentes que estão cadastrados em produtos?
 17 - Escreva o comando que apresente a quantidade de BEBEIDA ALCÓOLICA que estão cadastrados em produtos?
 18 - Escreva o comando que liste o nome dos Refrigentes de 2 L?
