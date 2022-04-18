@@ -29,7 +29,7 @@ obs: Para cada questão utilize o padrão SQL89 e SQL92
 13 - Em qual categoria e linha pertence o produto REFRIGERANTE COCA-COLA GARRAFA PET 2 L?
 14 - Qual o nome da linha onde estão todos os refrigentes? 
 15 - Qual o produto (preço de venda) mais caro da categoria BEBEIDA NÃO ALCÓOLICA?
-16 - Escreva o comando que apresente a quantidade de refrigentes que estão cadastrados em produtos?
+16 - Escreva o comando que apresente a quantidade de produtos líquidos?
 17 - Escreva o comando que apresente a quantidade de BEBEIDA ALCÓOLICA que estão cadastrados em produtos?
 18 - Escreva o comando que liste o nome dos Refrigentes de 2 L?
 19 - Escreva o comando que apresente o preço médio dos Refrigentes de 2 L?
