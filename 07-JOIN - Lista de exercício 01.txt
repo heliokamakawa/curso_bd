@@ -32,7 +32,7 @@ obs: Para cada questão utilize o padrão SQL89 e SQL92
 16 - Escreva o comando que apresente a quantidade de produtos líquidos?
 17 - Escreva o comando que apresente a quantidade de BEBIDA ALCÓOLICA que estão cadastrados em produtos?
 18 - Escreva o comando que liste o nome dos Refrigerantes de 2 L?
-19 - Escreva o comando que apresente o preço médio dos Refrigerantes de 2 L?
+19 - Escreva o comando que apresente a média do preço de venda dos Refrigerantes de 2 L?
 20 - Com base do estudo de caso, elabore um exercício de sua autoria que envolva pelo menos 3 tabelas, no qual, o resultado possa ajudar o usuário. Em seguida resolva o exercício elaborado.
 */
 
