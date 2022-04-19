@@ -359,15 +359,15 @@ FROM
 WHERE 
 	p.id = pt.produto_id
 	AND t.id = pt.tipo_id
-	AND c.descricao = ' REFRIGERANTE GARRAFA PET 2 L';
+	AND t.descricao = 'REFRIGERANTE GARRAFA PET 2 L';
 
 -- SQL92
 SELECT p.nome
 FROM 
 	produto p
-INNER JOIN produto_tipo pt ON t.id = pt.tipo_id
+INNER JOIN produto_tipo pt ON p.id = pt.produto_id
 INNER JOIN tipo t ON t.id = pt.tipo_id
-WHERE c.descricao = ' REFRIGERANTE GARRAFA PET 2 L';
+WHERE t.descricao = 'REFRIGERANTE GARRAFA PET 2 L';
 
 /* 19 - Escreva o comando que apresente o preço médio dos Refrigentes de 2 L? */
 -- SQL89
@@ -379,15 +379,15 @@ FROM
 WHERE 
 	p.id = pt.produto_id
 	AND t.id = pt.tipo_id
-	AND c.descricao = ' REFRIGERANTE GARRAFA PET 2 L';
+	AND t.descricao = 'REFRIGERANTE GARRAFA PET 2 L';
 
 -- SQL92
 SELECT AVG(p.preco_venda)
 FROM 
 	produto p
-INNER JOIN produto_tipo pt ON t.id = pt.tipo_id
+INNER JOIN produto_tipo pt ON p.id = pt.produto_id
 INNER JOIN tipo t ON t.id = pt.tipo_id
-WHERE c.descricao = ' REFRIGERANTE GARRAFA PET 2 L';
+WHERE t.descricao = 'REFRIGERANTE GARRAFA PET 2 L';
 
 /* 20 - Com base do estudo de caso, elabore um exercício de sua autoria que envolva pelo menos 3 tabelas, no qual, o resultado possa ajudar o usuário. Em seguida resolva o exercício elaborado.*/
 
