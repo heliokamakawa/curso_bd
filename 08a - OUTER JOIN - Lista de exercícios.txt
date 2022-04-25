@@ -1,0 +1,31 @@
+/**
+Lista de exercícios - OUTER JOIN 
+
+Responda as questões:
+01 - O que é OUTER JOIN? Quando é necessário? Quais opçõe existem no padrão SQL e no MySQL.
+02 - Quais são as opções em OUTER JOIN? Explique cada uma.
+04 - Qual a sintaxe do OUTER JOIN? Maiúscula ou minúscula faz diferença? Existe algum padrão? Explique.
+05 - Em OUTER JOIN existe o padrão SQL89 e SQL92? Explique. 
+06 - Quais são as principais diferenças entre o LEFT e o RIGHT JOIN.
+07 - Utilizando o LEFT JOIN é possível gerar o mesmo resultado com RIGHT JOIN? Justifique.
+08 - De que forma é possível gerar o resultado de FULL JOIN em MySQL?
+
+Conforme o estudo de caso, elabore as consultas solicitadas abaixo:
+01 - Liste o id e o nome de todos os estados e caso existir, o nome das respectivas cidades.
+02 - Refaça o comando do exercício anterior, renomeando as colunas.
+03 - Refaça o exercício anterior atribuindo o nome completo da tabela em todos os atributos.
+04 - Refaça o exercício anterior definindo o apelido na tabela.
+05 - Explique a diferença entre o exercício 03 e 04. Qual é a melhor? Qual devemos estudar?
+06 - Liste o nome e a sigla de todos os estados que não tem cidades cadastradas.
+07 - Liste o nome de todos os fornecedores de BEBEIDA NÃO ALCÓOLICA e caso exista, o registro de todas as compras realizadas com o respectivo fornecedor.
+08 - Escreva o comando que apresente o nome de todos os estados e caso exista, o nome de todos os funcionários que moram no estado.
+09 - Escreva o comando que apresente o nome de todos os funcionários e nome dos respectivos estados onde moram. Observação: apresente também o nome dos estados onde não há funcionários morando.
+10 - Explique a diferença entre os 2 exercícios anteriores.
+11 - Liste o id e o nome de todos os clientes que ainda não compraram produtos da região sudeste e as respectivas siglas do estado. 
+12 - Escreva a consulta que liste o nome e o telefone dos Fornecedores da cidade de São Paulo que nunca forneceram produtos para empresa. 
+13 - Qual o produto (preço de venda) mais caro da categoria BEBEIDA NÃO ALCÓOLICA que nunca foi vendido?
+14 - Escreva o comando que apresente o preço de custo total de todos os produtos que foram comprados e não foram vendidos.
+15 - O departamento de marketing precisa elaborar uma nova companha. Para isto, necessita de um relatório que apresente o nome de todos os estados que tem e não tem uma venda.
+16 - Escreva a consulta que liste o nome dos Funcionários do estado Paraná e caso existir, as vendas realizadas. 
+17 - Com base do estudo de caso, elabore um exercício de sua autoria que envolva pelo menos 3 tabelas, no qual, o resultado possa ajudar o usuário. Em seguida resolva o exercício elaborado.
+*/
