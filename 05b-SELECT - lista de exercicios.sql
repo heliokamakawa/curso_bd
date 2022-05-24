@@ -1,6 +1,6 @@
 /*
 Lista de Exercícios (DML) - Consulta Simples
-Caso  queira fazer na prática, execute o script do link: https://github.com/heliokamakawa/curso_bd/blob/master/05a-SELECT%20-%20script%20aula.sql
+Caso  queira fazer na prática, execute o script do link: https://github.com/heliokamakawa/curso_bd/blob/master/02a-INSERT%20-%20script%20aula.sql
 
 SINTAXE: 
 SELECT → especifique as colunas (aqui * representa todas as coluas)
