@@ -1,16 +1,10 @@
 /*
 Lista de Exercícios (DML) - Consulta Simples
-Caso  queira fazer na prática, execute o script do link: https://github.com/heliokamakawa/curso_sql/blob/main/aula_sql_05_DML_insert.sql
-*/
+Caso  queira fazer na prática, execute o script do link: https://github.com/heliokamakawa/curso_bd/blob/master/05a-SELECT%20-%20script%20aula.sql
 
-/**
 SINTAXE: 
-
 SELECT → especifique as colunas (aqui * representa todas as coluas)
 FROM → nome da tabela
-
-
-
 **/
 
 -- 1) Escreva o comando para seleccionar todos os registros da tabela estado com todas as colunas.
