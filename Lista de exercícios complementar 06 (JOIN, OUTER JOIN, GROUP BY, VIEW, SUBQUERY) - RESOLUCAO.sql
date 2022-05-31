@@ -102,7 +102,7 @@ WHERE ordem_servico.e_orcamento = 'N'
 GROUP BY cliente.id
 HAVING AVG(ordem_servico.total) >= 900;
 
--- 6) Liste o nome e o preço >>de venda<< de todas as peças cadastradas que já foram orçadas pelos clientes, porém que ainda não foram vendidas.
+-- 6) Liste o nome e o preço de venda de todas as peças cadastradas que já foram orçadas pelos clientes, porém que ainda não foram vendidas.
 SELECT peca.nome, peca.preco_venda
 FROM cliente, ordem_servico, item_ordem_servico, peca
 WHERE cliente.id = ordem_servico.cliente_id 
