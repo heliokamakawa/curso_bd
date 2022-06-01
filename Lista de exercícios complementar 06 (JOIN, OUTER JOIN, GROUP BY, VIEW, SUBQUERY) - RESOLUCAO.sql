@@ -115,23 +115,20 @@ AND item_ordem_servico.peca_id = peca.id
 AND  ordem_servico.e_orcamento = 'S'
 AND peca.id NOT IN(
 		SELECT peca.id
-		FROM cliente, ordem_servico, item_ordem_servico, peca
-		WHERE cliente.id = ordem_servico.cliente_id 
+		FROM ordem_servico, item_ordem_servico, peca
 		AND ordem_servico.id = item_ordem_servico.ordem_servico_id 
 		AND item_ordem_servico.peca_id = peca.id
 		AND  ordem_servico.e_orcamento = 'N'
 	);
     
 SELECT peca.nome, peca.preco_venda
-FROM cliente
-INNER JOIN ordem_servico ON cliente.id = ordem_servico.cliente_id 
+FROM ordem_servico ON cliente.id = ordem_servico.cliente_id 
 INNER JOIN item_ordem_servico ON ordem_servico.id = item_ordem_servico.ordem_servico_id
 INNER JOIN peca ON item_ordem_servico.peca_id = peca.id
 WHERE ordem_servico.e_orcamento = 'S'
 AND peca.id NOT IN(
 		SELECT peca.id
-		FROM cliente
-		INNER JOIN ordem_servico ON cliente.id = ordem_servico.cliente_id 
+		FROM ordem_servico ON cliente.id = ordem_servico.cliente_id 
 		INNER JOIN item_ordem_servico ON ordem_servico.id = item_ordem_servico.ordem_servico_id
 		INNER JOIN peca ON item_ordem_servico.peca_id = peca.id
 		WHERE ordem_servico.e_orcamento = 'N'
