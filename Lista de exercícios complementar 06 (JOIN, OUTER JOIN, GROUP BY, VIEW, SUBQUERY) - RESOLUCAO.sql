@@ -32,14 +32,14 @@ WHERE estado.sigla IN ('PR','SC','RS')
 -- 2) Liste o nome de todas as categorias de peças. Em relação a cada categoria de peças, apresente: (i) a quantidade de peças, (ii) a peça mais cara, (iii) a mais barata, e (iv) a média de preços das peças. Observação: considere o preço de custo. 
 -- padrão SQL89
 SELECT 
-	categoria.nome
+    categoria.nome
     , COUNT(estoque) 
     , MAX(peca.preco_custo) 
     , MIN(peca.preco_custo) 
     , AVG(peca.preco_custo)
 FROM 
-	categoria
-	, peca_categoria
+    categoria
+    , peca_categoria
     , peca
 WHERE categoria.id = peca_categoria.categoria_id
    AND peca_categoria.peca_id = peca.id
@@ -47,7 +47,7 @@ GROUP BY categoria.id;
 
 -- padrão SQL92
 SELECT 
-	categoria.nome
+    categoria.nome
     , COUNT(estoque) 
     , MAX(peca.preco_custo) 
     , MIN(peca.preco_custo) 
@@ -67,7 +67,7 @@ LEFT JOIN servico ON servico.id = servico_realizado.servico_id;
 -- 4) Crie uma VIEW que apresente todos os clientes ativos do estado “PARANÁ” que já realizam algum orçamento. Em seguida, escreva o comando de consulta desta VIEW que apresente o nome de todos os clientes que fizeram o orçamento acima de R$ 500,00.
 -- padrão SQL89
 CREATE OR REPLACE VIEW view_cliente_parana AS 
-	SELECT cliente.id, cliente.nome, ordem_servico.total
+    SELECT cliente.id, cliente.nome, ordem_servico.total
     FROM estado, cidade, cliente, ordem_servico
     WHERE estado.id = cidade.estado_id
     AND cidade.id = cliente.cidade_id 
@@ -78,7 +78,7 @@ CREATE OR REPLACE VIEW view_cliente_parana AS
 
 -- padrão SQL92    
 CREATE OR REPLACE VIEW view_cliente_parana AS 
-	SELECT cliente.id, cliente.nome, ordem_servico.total
+    SELECT cliente.id, cliente.nome, ordem_servico.total
     FROM estado
     INNER JOIN cidade ON estado.id = cidade.estado_id
     INNER JOIN cliente ON cidade.id = cliente.cidade_id 
