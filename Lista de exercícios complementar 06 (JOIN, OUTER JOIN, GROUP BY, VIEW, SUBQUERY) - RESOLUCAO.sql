@@ -7,13 +7,15 @@ Link Script: https://github.com/heliokamakawa/curso_bd/blob/master/der/servico%2
 -- 1) Liste os nomes do clientes da região sul que já realizam algum serviço na empresa envolvendo peças com preço de custo maior que R$ 100,00.
 -- padrão SQL89
 SELECT cliente.nome
-FROM estado, cidade, cliente, ordem_servico, item_ordem_servico, peca
+FROM estado, cidade, cliente, ordem_servico, item_ordem_servico, peca, servico_realizado
 WHERE estado.id = cidade.estado_id 
    AND cidade.id = cliente.cidade_id 
    AND cliente.id = ordem_servico.cliente_id 
    AND ordem_servico.id = item_ordem_servico.ordem_servico_id 
    AND peca.id = item_ordem_servico.peca_id 
-   AND estado.sigla IN ('PR','SC','RS');
+   AND item_ordem_servico.servico_realizado_id = servico_realizado.id 
+   AND estado.sigla IN ('PR','SC','RS')
+   AND peca.preco_custo > 100;
 
 -- padrão SQL92
 SELECT cliente.nome
@@ -23,7 +25,9 @@ INNER JOIN cliente ON cidade.id = cliente.cidade_id
 INNER JOIN ordem_servico ON cliente.id = ordem_servico.cliente_id 
 INNER JOIN item_ordem_servico ON ordem_servico.id = item_ordem_servico.ordem_servico_id 
 INNER JOIN peca ON peca.id = item_ordem_servico.peca_id 
-WHERE estado.sigla IN ('PR','SC','RS');
+INNER JOIN servico_realizado ON item_ordem_servico.servico_realizado_id = servico_realizado.id 
+WHERE estado.sigla IN ('PR','SC','RS')
+   AND peca.preco_custo > 100;
     
 -- 2) Liste o nome de todas as categorias de peças. Em relação a cada categoria de peças, apresente: (i) a quantidade de peças, (ii) a peça mais cara, (iii) a mais barata, e (iv) a média de preços das peças. Observação: considere o preço de custo. 
 -- padrão SQL89
