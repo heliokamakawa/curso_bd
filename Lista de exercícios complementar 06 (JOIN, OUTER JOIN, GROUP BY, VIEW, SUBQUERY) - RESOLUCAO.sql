@@ -33,7 +33,7 @@ WHERE estado.sigla IN ('PR','SC','RS')
 -- padrão SQL89
 SELECT 
     categoria.nome
-    , COUNT(estoque) 
+    , SUM(estoque) 
     , MAX(peca.preco_custo) 
     , MIN(peca.preco_custo) 
     , AVG(peca.preco_custo)
