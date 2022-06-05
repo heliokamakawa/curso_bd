@@ -12,6 +12,8 @@ Responda as questões:
 09 - De acordo com o estudo de caso, cite 4 exemplos em que seja possível utilizar o JOIN e 3 exemplos que não seja possível realizar o JOIN.
 
 Conforme o estudo de caso, elabore as consultas solicitadas abaixo:
+Link do DER: https://github.com/heliokamakawa/curso_bd/blob/master/00-estudo%20de%20caso%20loja%20-%20DER.png
+Link do script: https://github.com/heliokamakawa/curso_bd/blob/master/00-estudo%20de%20caso%20%20loja%20-script.sql
 obs: Para cada questão utilize o padrão SQL89 e SQL92
 01 - Liste o id e o nome de todas as cidades e as respectivas siglas do estado.
 02 - Em relação ao resultado do exercício anterior,note que os nomes das colunas não estão claras. Refaça o comando para que torne mais claras.
