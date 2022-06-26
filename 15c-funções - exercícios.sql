@@ -13,4 +13,5 @@ Para cada função solicitada, crie, teste somente a função, se possível, tes
     → Elimine a função. 
 09) Qual a diferença? Qual possui o melhor desempenho?
 10) Utilizamos a função get_nome_cliente, evitando JOIN. Qual a vantagem e a desvantagem? Em que caso devemos utilizar?
+11) Elabore 3 funções de acordo com o seu projeto.
 */
