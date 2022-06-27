@@ -149,6 +149,13 @@ SELECT NOW();
 -- consultando nome do cliente
 -- usa da função criada na consulta
 
+/*
+PRÁTICA 
+→ Escreva uma função que receba como parâmetro o nome/sobrenome e retorne o nome completo.
+	teste somente a função (sem tabelas);
+	teste a função inserida em uma consulta; 
+	eliminte a função.
+*/
 
 /*
 *** ESTRUTURA DE DECISÃO ***
