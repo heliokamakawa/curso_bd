@@ -35,7 +35,8 @@ venda_id INT NOT NULL
 ,produto_id INT NOT NULL
 ,quantidade INT NOT NULL
 ,preco_unidade INT NOT NULL
-,total DECIMAL(8,2) AS (quantidade * preco_unidade)
+,desconto INT DEFAULT 0
+,total DECIMAL(8,2) AS (quantidade * preco_unidade - desconto)
 ,CONSTRAINT pk_item_venda PRIMARY KEY (venda_id,produto_id)
 ,CONSTRAINT fk_item_venda_venda FOREIGN KEY (venda_id) REFERENCES venda (id)
 ,CONSTRAINT fk_item_venda_produto_id FOREIGN KEY (produto_id) REFERENCES produto (id)
@@ -74,11 +75,11 @@ INSERT INTO venda (cliente_id, data_cadastro) VALUES (4,'2022-05-30');
 INSERT INTO venda (cliente_id, data_cadastro) VALUES (3,'2022-05-30');
 INSERT INTO venda (cliente_id, data_cadastro) VALUES (1,'2022-05-30');
 
-INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (1,1,5,10);
+INSERT INTO item_venda (venda_id, produto_id,quantidade,desconto, preco_unidade) VALUES (1,1,5,2,10);
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (1,3,2,30);
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (1,5,1,50);
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (2,2,2,20);
-INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (2,4,2,40);
+INSERT INTO item_venda (venda_id, produto_id,quantidade,desconto,preco_unidade) VALUES (2,4,2,60,40); -- ACIMA DO DESCONTO
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (3,1,5,9.5);
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (3,3,5,30);
 INSERT INTO item_venda (venda_id, produto_id,quantidade,preco_unidade) VALUES (3,2,5,20);
