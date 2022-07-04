@@ -129,12 +129,12 @@ BEGIN
     read_loop : LOOP 
 		FETCH cursor_venda INTO codigo_produto;
 		SET resultado = verificar_desconto_produto(codigo_venda, codigo_produto);
-        IF resultado = FALSE OR done THEN 
-			BEGIN
-				LEAVE read_loop;
-			END;
+        IF resultado = FALSE OR acabou THEN 
+		BEGIN
+			LEAVE read_loop;
+		END;
         END IF;
-	END LOOP;
+    END LOOP;
     CLOSE cursor_venda;
     RETURN resultado;
 END;
