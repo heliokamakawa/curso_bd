@@ -20,7 +20,7 @@ SELECT get_nome_cliente(1); -- testando a função
 
 -- como fazer a consulta que traga a data e o código do cliente da venda com id 1?
 SELECT 
-	venda.data_cadastro
+    venda.data_cadastro
     , venda.cliente_id
 FROM venda 
 WHERE id = 1;
@@ -34,7 +34,7 @@ WHERE id = 1;
 
 -- fazendo o mesmo para todos os registros
 SELECT 
-	venda.data_cadastro
+    venda.data_cadastro
     , get_nome_cliente(venda.cliente_id) 
 FROM venda;
 
@@ -57,7 +57,7 @@ DELIMITER //
 CREATE FUNCTION calcular_total_venda(codigo_venda INT)
 RETURNS DECIMAL(8,2) DETERMINISTIC  
 BEGIN 
-	DECLARE total_venda DECIMAL(8,2); 
+    DECLARE total_venda DECIMAL(8,2); 
     SELECT SUM(item_venda.total) INTO total_venda 
     FROM item_venda
     WHERE venda_id = codigo_venda;
@@ -77,7 +77,7 @@ DELIMITER //
 CREATE FUNCTION verificar_desconto_produto(codigo_venda INT, codigo_produto INT)
 RETURNS BOOL DETERMINISTIC 
 BEGIN
-	DECLARE desconto DECIMAL(8,2); 
+    DECLARE desconto DECIMAL(8,2); 
     DECLARE quantidade INT; 
     DECLARE preco_produto DECIMAL(8,2);
     DECLARE desconto_unidade DECIMAL(8,2); 
@@ -85,7 +85,7 @@ BEGIN
     DECLARE resultado BOOL DEFAULT FALSE; 
     
     SELECT 
-		item_venda.desconto 
+	item_venda.desconto 
         ,item_venda.quantidade 
         ,item_venda.preco_unidade INTO desconto, quantidade, preco_produto
 	FROM item_venda 
@@ -96,8 +96,8 @@ BEGIN
     SET limite_preco = preco_produto * 0.5;
     
     IF desconto_unidade < limite_preco THEN 
-		BEGIN
-			SET resultado = TRUE;
+	BEGIN
+	       SET resultado = TRUE;
         END;
     END IF;
     return resultado;
@@ -120,19 +120,19 @@ BEGIN
     DECLARE resultado BOOL DEFAULT TRUE; 
     DECLARE codigo_produto INT; 
     DECLARE acabou INT DEFAULT FALSE;
-	DECLARE cursor_venda CURSOR FOR 
-		SELECT item_venda.produto_id
-		FROM item_venda 
+    DECLARE cursor_venda CURSOR FOR 
+	SELECT item_venda.produto_id
+	FROM item_venda 
         WHERE item_venda.venda_id = codigo_venda;
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET acabou = TRUE;
         
-	OPEN cursor_venda;
+    OPEN cursor_venda;
     read_loop : LOOP 
-		FETCH cursor_venda INTO codigo_produto;
-		SET resultado = verificar_desconto_produto(codigo_venda, codigo_produto);
+	FETCH cursor_venda INTO codigo_produto;
+	SET resultado = verificar_desconto_produto(codigo_venda, codigo_produto);
         IF resultado = FALSE OR acabou THEN 
 		BEGIN
-			LEAVE read_loop;
+	     		LEAVE read_loop;
 		END;
         END IF;
     END LOOP;
