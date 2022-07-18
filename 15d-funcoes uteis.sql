@@ -110,6 +110,7 @@ SELECT verificar_desconto_produto(2,4);
 SELECT verificar_desconto_produto(3,3);
 
 
+-- https://dev.mysql.com/doc/refman/8.0/en/cursors.html
 -- validação por venda 
 DROP FUNCTION IF EXISTS verificar_desconto_venda;
 DELIMITER //
