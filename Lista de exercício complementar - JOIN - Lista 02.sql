@@ -12,7 +12,8 @@ WHERE pk = fk;
 
 objetivo de hoje:
 → não errar na sintaxe/semântica no >>FROM<< → quais tabelas podem e devem ser colocadas
-→ não errar na sintaxe/semântica no >>FROM<< → quais tabelas podem e devem ser colocadas
+→ não errar na sintaxe/semântica no >>WHERE<< → condição de JUNÇÃO (PK e sua REFERÊNCIA)
+→ entender o JOIN (que só há registros relacionados)
 → conseguir realizar JOIN de mais de 2 tabelas (perceber que é tudo igual)
 
 Aquecimento
