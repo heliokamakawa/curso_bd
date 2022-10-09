@@ -21,6 +21,9 @@ END;										-- fim
 //											-- fim da definição 
 DELIMITER ;									-- alterando (retornando) o delimitador de "//" para ";"
 
+
+Link script: https://raw.githubusercontent.com/heliokamakawa/curso_bd/master/00-estudo%20de%20caso%20%20loja%20-script.sql
+
 Exemplos:
 01 - Crie uma procedure que
 02 - Crie uma procedure que faça a inserção da venda de um produto e atualize o estoque; 
