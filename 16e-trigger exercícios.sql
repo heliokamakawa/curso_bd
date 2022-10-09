@@ -4,7 +4,7 @@ Exercícios de fixação - utilize o script do estudo de caso
 - Faça uma declarando variáveis e com select into; 
 - Faça a segunda com uma estrutura de decisão; 
 - Faça a terceira que gere erro, impedindo a ação;
-- Faça a quart que utilize a variável new e old - tente diferenciar. 
+- Faça a quarta que utilize a variável new e old - tente diferenciar. 
 
 02- Uma trigger que tem a função adicionar a entrada de produtos no estoque deve ser associado para qual:
 •	Tabela?
