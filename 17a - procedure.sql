@@ -25,9 +25,8 @@ DELIMITER ;									-- alterando (retornando) o delimitador de "//" para ";"
 Link script: https://raw.githubusercontent.com/heliokamakawa/curso_bd/master/00-estudo%20de%20caso%20%20loja%20-script.sql
 
 Exemplos:
-01 - Crie uma procedure que
+01 - Crie uma procedure que faça a inserção de uma venda. Caso o cliente não esteja ativo, gerar erro;
 02 - Crie uma procedure que faça a inserção da venda de um produto e atualize o estoque; 
-03 - Crie uma procedure que faça a inserção de uma venda. Caso o cliente não esteja ativo, gerar erro;
 
 01- Escreva quarto procedures de sintaxe - não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
 - Faça uma declarando variáveis e com select into; 
