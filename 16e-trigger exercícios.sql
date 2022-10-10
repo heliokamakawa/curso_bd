@@ -1,5 +1,6 @@
 /*
 Exercícios de fixação - utilize o script do estudo de caso
+https://github.com/heliokamakawa/curso_bd/blob/master/16b-trigger%20script%20base.sql
 01- Escreva quatro triggers de sintaxe - a trigger não precisa ter funcionalidade, basta não dar erro de sintaxe. Use variável global para testar.
 - Faça uma declarando variáveis e com select into; 
 - Faça a segunda com uma estrutura de decisão; 
