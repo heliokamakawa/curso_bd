@@ -39,4 +39,5 @@ Exemplos:
 05- Para o controle de salário de funcionários de uma empresa e os respectivos adiantamentos (vales):
  - quais tabelas são necessárias?
 06- De acordo com o seu projeto de banco de dados, pense em pelo menos 3 procedures úteis. Discuta com os seus colegas em relação a relevância e implemente-as.
+07- Explique as diferenças entre trigger, função e procedure. Indique as vantagens e desvantagens em utilizar a procedure.
 */
