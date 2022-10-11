@@ -21,6 +21,60 @@ END;										-- fim
 //											-- fim da definição 
 DELIMITER ;									-- alterando (retornando) o delimitador de "//" para ";"
 
+*/
+
+
+
+-- >>>>>>>>>>>>>>>>>>>>>Crie uma procedure que faça a inserção de uma venda. 
+-- Caso o cliente não esteja ativo, gerar erro;
+DELIMITER //
+CREATE PROCEDURE insercao_venda (id_cliente INT)
+BEGIN
+	DECLARE ativo CHAR; 
+    SELECT cliente.ativo INTO ativo FROM cliente WHERE cliente.id = id_cliente;
+    IF ativo = 'N' THEN
+    BEGIN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'CLIENTE INATIVO';
+    END;
+    END IF;
+    INSERT INTO venda (cliente_id) VALUES (id_cliente);
+END;
+//
+DELIMITER ;
+
+
+SELECT * FROM venda; -- verificando se há venda...
+CALL insercao_venda(1); -- executando procedure
+
+SELECT * FROM venda; -- verificando se deu certo
+
+CALL insercao_venda(4); -- deverá gerar erro
+
+
+-- >>>>>>>>>>>>>>>>>>>>Crie uma procedure que faça a inserção da venda de um produto e atualize o estoque; 
+DELIMITER //
+CREATE PROCEDURE insercao_item_venda(id_produto INT, id_venda INT, quantidade INT, preco_unidade DECIMAL(8,2))
+BEGIN
+	INSERT INTO item_venda (produto_id,venda_id,quantidade,preco_unidade) VALUES 
+    (id_produto, id_venda, quantidade, preco_unidade);
+    UPDATE produto SET estoque = (estoque - quantidade) WHERE produto.id = id_produto;
+END;
+//
+DELIMITER ;
+
+
+SELECT produto.nome, produto.estoque FROM produto WHERE produto.id = 1; -- verificado o estoque do produto 1
+
+SET @preco_coca = (SELECT preco_venda FROM produto WHERE id = 1); -- pegando o preço unidade do produto 1
+
+CALL insercao_item_venda(1,1,2,@preco_coca); -- executando a procedure
+
+SELECT produto.nome, produto.estoque FROM produto WHERE produto.id = 1; -- verificado se deu certo!
+
+
+
+/*
+
 
 Link script: https://raw.githubusercontent.com/heliokamakawa/curso_bd/master/00-estudo%20de%20caso%20%20loja%20-script.sql
 
