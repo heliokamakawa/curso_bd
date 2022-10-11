@@ -30,7 +30,7 @@ DELIMITER ;									-- alterando (retornando) o delimitador de "//" para ";"
 DELIMITER //
 CREATE PROCEDURE insercao_venda (id_cliente INT)
 BEGIN
-	DECLARE ativo CHAR; 
+    DECLARE ativo CHAR; 
     SELECT cliente.ativo INTO ativo FROM cliente WHERE cliente.id = id_cliente;
     IF ativo = 'N' THEN
     BEGIN
@@ -55,7 +55,7 @@ CALL insercao_venda(4); -- deverá gerar erro
 DELIMITER //
 CREATE PROCEDURE insercao_item_venda(id_produto INT, id_venda INT, quantidade INT, preco_unidade DECIMAL(8,2))
 BEGIN
-	INSERT INTO item_venda (produto_id,venda_id,quantidade,preco_unidade) VALUES 
+    INSERT INTO item_venda (produto_id,venda_id,quantidade,preco_unidade) VALUES 
     (id_produto, id_venda, quantidade, preco_unidade);
     UPDATE produto SET estoque = (estoque - quantidade) WHERE produto.id = id_produto;
 END;
